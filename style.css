@@ -16,6 +16,7 @@ body {
 #result {
   background-color: hsl(224, 36%, 15%);
   width: auto;
+  height: 30px; 
   border-radius: 8px;
   padding: 25px;
   font-size: 2rem;
@@ -54,7 +55,7 @@ button {
   color: white;
 }
 
-#reset {
+#clear {
   grid-column: 1 / 3;
 }
 

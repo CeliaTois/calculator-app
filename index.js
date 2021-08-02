@@ -1,13 +1,7 @@
 const buttons = document.querySelectorAll (".btn");
 const result = document.getElementById ("result");
 
-buttons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        result.textContent = e.target.innerText;
-    })
-})
-
-let total = 0;
+let total = 0; // Chiffre de départ, avant toute opération
 
 function addition(x) {
     total += x;
@@ -40,3 +34,17 @@ function multiplication(x) {
 function reset() {
     total = 0; // Remet la calculatrice à 0
 }
+ 
+buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        result.textContent += e.target.id;
+    })
+})
+
+equal.addEventListener("click", () => {
+    result.textContent = eval(result.textContent);
+})
+
+clear.addEventListener("click", () => {
+    result.textContent = "";
+})
